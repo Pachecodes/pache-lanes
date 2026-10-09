@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pache-lanes"
+version = "0.1.0"
+description = "Standalone bounded coding-agent lane lifecycle tooling"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Pache Lanes contributors"}]
+dependencies = []
+
+[project.scripts]
+pache-lane = "pache_lanes.local:main"
+pache-remote-lane = "pache_lanes.remote:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

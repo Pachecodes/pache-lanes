@@ -1,0 +1,17 @@
+{
+  "state_dir": "~/.local/state/pache-lanes",
+  "herdr_session": "pache-lanes",
+  "remote_herdr_session": "pache-lanes",
+  "machines": {
+    "worker": {
+      "enabled": false,
+      "target": "my-worker",
+      "platform": "posix"
+    },
+    "loopback": {
+      "enabled": false,
+      "target": "localhost",
+      "platform": "posix"
+    }
+  }
+}
