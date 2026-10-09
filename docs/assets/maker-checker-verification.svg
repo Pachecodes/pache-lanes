@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Maker, checker, and verification: an owner-directed workflow</title>
+  <desc id="desc">The owner defines the task and workspace. One maker writes, the owner runs deterministic checks, a separate checker independently reviews, and the owner decides whether to accept. Failed checks or review findings return to a bounded maker repair followed by checks and review again, or escalation. This is not automatic scheduling, approval, or an OS sandbox guarantee.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#cbd5e1"/></marker>
+    <marker id="repair" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#fbbf24"/></marker>
+  </defs>
+  <rect width="1200" height="620" rx="16" fill="#020617"/>
+  <rect width="1200" height="620" rx="16" fill="url(#grid)"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#f8fafc">
+    <text x="40" y="52" font-size="30" font-weight="700">Write. Verify. Independently review.</text>
+    <text x="40" y="88" font-size="21" fill="#cbd5e1">You define the task packet, editable scope, workspace, and acceptance criteria.</text>
+    <text x="40" y="120" font-size="21" fill="#cbd5e1">One writer per worktree. Start the checker only after the maker settles.</text>
+    <g fill="none" stroke="#cbd5e1" stroke-width="2.5" marker-end="url(#arrow)">
+      <path d="M280 250H320"/><path d="M560 250H600"/><path d="M840 250H880"/>
+    </g>
+    <g fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#repair)">
+      <path d="M440 320V420"/><path d="M720 320V420"/>
+      <path d="M320 470H160V320"/>
+      <path d="M1020 320V470H840"/>
+    </g>
+    <g stroke-width="2">
+      <rect x="40" y="180" width="240" height="140" rx="10" fill="#083344" stroke="#22d3ee"/>
+      <rect x="320" y="180" width="240" height="140" rx="10" fill="#064e3b" stroke="#34d399"/>
+      <rect x="600" y="180" width="240" height="140" rx="10" fill="#2e1065" stroke="#a78bfa"/>
+      <rect x="880" y="180" width="280" height="140" rx="10" fill="#1e293b" stroke="#94a3b8"/>
+      <rect x="320" y="420" width="520" height="100" rx="10" fill="#422006" stroke="#fbbf24"/>
+    </g>
+    <g font-size="25" font-weight="700">
+      <text x="62" y="216">1 · Maker writes</text><text x="342" y="216">2 · You verify</text>
+      <text x="622" y="216">3 · Checker</text><text x="902" y="216">4 · You decide</text>
+    </g>
+    <g font-size="21" fill="#e2e8f0">
+      <text x="62" y="260">Scoped code edits</text><text x="62" y="291">Reports evidence</text>
+      <text x="342" y="260">Run project checks</text><text x="342" y="291">Inspect the diff</text>
+      <text x="622" y="260">Independent review</text><text x="622" y="291">Diff + check evidence</text>
+      <text x="902" y="260">Meets the task?</text><text x="902" y="291">Accept or request work</text>
+    </g>
+    <g font-size="19" fill="#cbd5e1" text-anchor="middle">
+      <text x="440" y="163">Changes ready</text><text x="720" y="163">Checks pass</text><text x="1020" y="163">Review evidence</text>
+    </g>
+    <g font-size="20" fill="#fde68a">
+      <text x="1032" y="390">Request work</text>
+      <text x="452" y="376">Check fails</text><text x="732" y="376">Findings</text>
+      <text x="47" y="382">New task</text><text x="47" y="409">Bounded</text><text x="47" y="436">repair</text>
+      <text x="344" y="454" font-size="24" font-weight="700">Repair and repeat, or escalate</text>
+      <text x="344" y="490">Preserve evidence; stop repeated failures.</text>
+    </g>
+    <text x="40" y="570" font-size="21" fill="#cbd5e1">Owner-directed handoffs, not automatic repair scheduling or approval.</text>
+    <text x="40" y="599" font-size="21" fill="#cbd5e1">CLI permission policies do not guarantee OS isolation. Self-report is not proof.</text>
+  </g>
+</svg>
